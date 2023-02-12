@@ -31,11 +31,11 @@ try
 
     Console.WriteLine("Supply the first number");
 
-    var a = decimal.TryParse(Console.ReadLine(), out decimal result) ? result : 0;
+    var firstNumber = decimal.TryParse(Console.ReadLine(), out decimal result) ? result : 0;
 
     Console.WriteLine("Supply the Second number");
 
-    var b = decimal.TryParse(Console.ReadLine(), out decimal result2) ? result2 : 0;
+    var secondNumber = decimal.TryParse(Console.ReadLine(), out decimal result2) ? result2 : 0;
 
 
 
@@ -46,19 +46,19 @@ try
     {
         case "1":
             Console.WriteLine("You picked Addition");
-            Console.WriteLine("\nSolved! {0}", logic.Add(a, b));
+            Console.WriteLine("\nSolved! {0}", logic.Add(firstNumber, secondNumber));
             break;
         case "2":
             Console.WriteLine("You picked Subtraction");
-            Console.WriteLine("\nSolved! {0}", logic.Subtract(a, b));
+            Console.WriteLine("\nSolved! {0}", logic.Subtract(firstNumber, secondNumber));
             break;
         case "3":
             Console.WriteLine("You picked Division");
-            Console.WriteLine("\nSolved! {0}", logic.Divide(a, b));
+            Console.WriteLine("\nSolved! {0}", logic.Divide(firstNumber, secondNumber));
             break;
         case "4":
             Console.WriteLine("You picked Multiplication");
-            Console.WriteLine("\nSolved! {0}", logic.Multiply(a, b));
+            Console.WriteLine("\nSolved! {0}", logic.Multiply(firstNumber, secondNumber));
             break;
         default:
             throw new ArgumentException("operation not found");
